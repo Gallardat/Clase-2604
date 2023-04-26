@@ -1,0 +1,16 @@
+<h1>FORMULARIO ALUMNO</h1>
+<form #ngFor="ngForm" [formGroup]="formulario" (submit)="aceptarI()">
+  <label for="ID">ID</label>
+  <input type="number" formControlName="id" [disabled]="true" required/>
+  <br><br>
+  <label for="dni">DNI</label>
+  <input type="text" formControlName="dni" required/>
+  <br><br>
+  <label for="nombre">nombre</label>
+  <input type="text" formControlName="nombre" required/>
+  <br><br>
+  <label for="horas">Horas</label>
+  <input type="number" formControlName="horas" required />
+  <br>
+  <button type="submit">CONFIRMAR </button>
+</form>

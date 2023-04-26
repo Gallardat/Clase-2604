@@ -1,0 +1,23 @@
+<router-outlet></router-outlet>
+<h1 style="color:blue">LISTA DE ALUMNOS</h1>
+<table border="1" style="background-color: aqua;" >
+  <thead>
+    <tr>
+      <th>ID </th>
+      <th>DNI</th>
+      <th>NOMBRE</th>
+      <th>HORAS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let datos of alumno ">
+    <td>{{datos.id}}</td>
+    <td>{{datos.dni}}</td>
+    <td>{{datos.nombre}}</td>
+    <td>{{datos.horas}}</td>
+    <td><button [routerLink]="['/modificar',datos.id]" >Modificar</button></td>
+  </tr>
+  </tbody>
+  </table>
+  <br>
+  <td><button [routerLink]="['/alta',]" > Dar de alta </button>
